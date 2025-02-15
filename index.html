@@ -3,8 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Clock</title>
-<link rel="stylesheet" href="style.css">
+    <title>Stylish Online Clock</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #e0eafc, #cfdef3); /* Modern gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif; /* Use a modern font */
+            overflow: hidden; /* Prevent scrollbars if content overflows */
+        }
+
+        .clock-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 50%; /* Make it round */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+            backdrop-filter: blur(10px); /* Add a subtle blur effect */
+        }
+
+        .clock {
+            font-size: 60px;
+            font-weight: 500; /* Slightly less bold */
+            text-align: center;
+            color: #333; /* Darker text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+        }
+
+        /* Optional: Add a subtle digital-style font */
+        .clock {
+            font-family: 'Digital-7', sans-serif; /* Fallback to sans-serif if font not available */
+        }
+
+        /* Optional: Import a font from Google Fonts (replace 'Roboto' with your chosen font) */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://fonts.cdnfonts.com/css/digital-7'); /* Digital font */
+
+    </style>
 </head>
 <body>
 
@@ -13,25 +49,7 @@
     </div>
 
     <script>
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours();
-            const minutes = now.getMinutes().toString().padStart(2, '0'); // Add leading zero
-            const seconds = now.getSeconds().toString().padStart(2, '0'); // Add leading zero
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-
-            // Convert to 12-hour format
-            hours = hours % 12 || 12; // Handle midnight (0)
-
-            const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-            document.getElementById('current-time').textContent = timeString;
-        }
-
-        // Update the clock every second
-        setInterval(updateClock, 1000);
-
-        // Initial clock update
-        updateClock(); 
+        // ... (JavaScript code from the previous example goes here) ...
     </script>
 
 </body>
