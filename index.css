@@ -1,0 +1,21 @@
+body {
+    background-color: #f0f0f0; /* Light gray background for the page */
+    display: flex;
+    justify-content: center; /* Horizontally center the clock */
+    align-items: center; /* Vertically center the clock */
+    min-height: 100vh; /* Make sure the body takes up the full viewport height */
+    font-family: sans-serif; /* Use a standard sans-serif font */
+}
+
+.clock-container {
+    background-color: #fff; /* White background for the clock container */
+    padding: 20px; /* Add some padding around the clock */
+    border-radius: 8px; /* Round the corners of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.clock {
+    font-size: 48px; /* Make the time display large */
+    font-weight: bold; /* Make the time display bold */
+    text-align: center; /* Center the time text */
+}
